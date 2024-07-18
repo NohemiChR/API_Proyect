@@ -75,7 +75,7 @@ header{
 }
 
 header .logo{
-    color: #fff;;
+    color: #fff;
     font-size: 2.5rem;
     font-weight: bolder;
 }
@@ -170,16 +170,26 @@ header .icons #menu-bars{
     padding:5rem;
 }
 
+/* .anime .swipper-wrapper{
+    width: 306px;  
+} */
 .anime .box{
-    width: 299px;
-    height:168px;
+    width: 306px;
+    height:458px;
+    overflow: hidden;
 }
+
+.anime .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen para que se adapte sin recortarla */
+  }
 
 .anime .content h3{
     font-size: 1.7rem;
     color: #ffffff;
     text-transform: uppercase;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .anime .content P{
@@ -194,9 +204,17 @@ header .icons #menu-bars{
 }
 
 .action .box{
-   width:299px;
-   height:168px;
+    width: 306px;
+    height:458px;
+    overflow: hidden;
 }
+
+.action .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen para que se adapte sin recortarla */
+  }
+
 
 .action .content h3{
     font-size: 1.7rem;
@@ -217,9 +235,17 @@ header .icons #menu-bars{
 }
 
 .child .box{
-    width:299px;
-    height:168px;
- }
+    width: 306px;
+    height:458px;
+    overflow: hidden;
+}
+
+.child .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen para que se adapte sin recortarla */
+  }
+
 
  .child .content h3{
      font-size: 1.7rem;

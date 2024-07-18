@@ -1,13 +1,14 @@
-export function createSlide(imageUrl, title, description) {
+export function createSmallSlide(imageUrl, title) {
     const templateSlide = `
         <div class="swiper-slide">
-            <div class="box" style="background: url(${imageUrl}) no-repeat;">
+            <div class="box">
+             <img src=${imageUrl} alt=${title}>
+            </div>
                 <div class="content">
                     <h3>${title}</h3>
-                    <p>${description}</p>
+                    
                     <a href="#" class="btn">Download</a>
-                </div>
-            </div>
+                </div>           
         </div>
     `;
     
