@@ -4,6 +4,7 @@ import { createSlideHome } from './components/home-silde.js';
 import { createSmallSlide } from './components/small-slide.js';
 import apiFetch from '../services/apifetch.js';
 
+let id_anime;
 
 async function loadSlides(endpoint, containerId) {
     console.log("incio");
@@ -20,16 +21,16 @@ async function loadSlides(endpoint, containerId) {
         data.data.forEach(item => {
             const title =item.title;
             const description = item.background;
-            
+            id_anime=item.mal_id;
             let newSlide;
             let imageUrl;
                if(containerId=="#home-swiper"){
                   imageUrl=item.trailer.images.maximum_image_url;
-                  newSlide = createSlideHome(imageUrl, title, description);
+                  newSlide = createSlideHome(imageUrl, title, description,id_anime);
                }else{
                   console.log(item.title);
                   imageUrl =item.images.jpg.large_image_url;
-                  newSlide = createSmallSlide(imageUrl, title);
+                  newSlide = createSmallSlide(imageUrl, title,id_anime);
                }
                container.appendChild(newSlide);
             
