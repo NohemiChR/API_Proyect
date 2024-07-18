@@ -17,17 +17,19 @@ Anime Explorer es el destino perfecto para los aficionados al anime que desean d
 - [Uso](#uso)
 - [Autores](#autores)
 
+### Autoras
+- Nohemi
+- Milenka
+- Leidy
+
 ## Instalación
 ```bash
 # Clona el repositorio
-git clone [https://github.com/tu-usuario/anime-explorer.git](https://github.com/NohemiChR/API_Proyect.git)
+git clone https://github.com/NohemiChR/API_Proyect.git
 
 # Navega al directorio del proyecto
 cd API_Proyect
 
-## Autoras
-- Nohemi
-- Milenka
-- Leidy
+
 
 
