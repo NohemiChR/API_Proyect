@@ -20,16 +20,18 @@ async function loadSlides(endpoint, containerId) {
         data.data.forEach(item => {
             const title =item.title;
             const description = item.background;
+            const id = item.mal_id; // Obtener el ID del anime
+            console.log("este es el id",id)
             
             let newSlide;
             let imageUrl;
                if(containerId=="#home-swiper"){
                   imageUrl=item.trailer.images.maximum_image_url;
-                  newSlide = createSlideHome(imageUrl, title, description);
+                  newSlide = createSlideHome(imageUrl, title, description,id);
                }else{
                   console.log(item.title);
                   imageUrl =item.images.jpg.large_image_url;
-                  newSlide = createSmallSlide(imageUrl, title);
+                  newSlide = createSmallSlide(imageUrl, title,id);
                }
                container.appendChild(newSlide);
             
@@ -43,6 +45,17 @@ async function loadSlides(endpoint, containerId) {
 document.addEventListener("DOMContentLoaded", () => {
 loadSlides('top/anime', '#home-swiper'); 
 // loadSlides('seasons/now', '#season-swiper'); 
- loadSlides('anime?genres=30', '#sport-swiper'); 
+ loadSlides('top/anime', '#sport-swiper'); 
 loadSlides('anime?genres=4', '#comedy-swiper');
+document.body.addEventListener('click', function(event) {
+    if (event.target.classList.contains('btn')) {
+        event.preventDefault(); // Evita el comportamiento por defecto del enlace
+        const id = event.target.getAttribute('id');
+        if (id) {
+            localStorage.setItem('animeId', id);
+            window.location.href = 'download.html';
+        }
+    }
+});
+
 })

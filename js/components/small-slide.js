@@ -1,4 +1,4 @@
-export function createSmallSlide(imageUrl, title) {
+export function createSmallSlide(imageUrl, title,id) {
     const templateSlide = `
         <div class="swiper-slide">
             <div class="box">
@@ -7,7 +7,7 @@ export function createSmallSlide(imageUrl, title) {
                 <div class="content">
                     <h3>${title}</h3>
                     
-                    <a href="#" class="btn">Download</a>
+                    <a href="#" class="btn" id="${id}">Download</a>
                 </div>           
         </div>
     `;
