@@ -11,20 +11,23 @@ Anime Explorer es una aplicación web innovadora que permite a los usuarios expl
 Anime Explorer es el destino perfecto para los aficionados al anime que desean descubrir nuevas series y obtener información detallada sobre sus animes favoritos. Con un diseño centrado en el usuario y datos actualizados constantemente, esta aplicación es una herramienta imprescindible para cualquier amante del anime.
 
 ## Tabla de Contenidos
-- [Descripción]
-- [Características Principales]
-- [Instalación]
-- [Uso]
-- [Contribuciones]
+- [Descripción](#descripcion)
+- [Características Principales](#caracteristicas)
+- [Instalación](#instalacion)
+- [Uso](#uso)
 - [Autores](#autores)
-- [Agradecimientos](#agradecimientos)
 
 ## Instalación
 ```bash
 # Clona el repositorio
-git clone https://github.com/tu-usuario/anime-explorer.git
+git clone [https://github.com/tu-usuario/anime-explorer.git](https://github.com/NohemiChR/API_Proyect.git)
 
 # Navega al directorio del proyecto
-cd anime-explorer
+cd API_Proyect
+
+## Autoras
+- Nohemi
+- Milenka
+- Leidy
 
 
