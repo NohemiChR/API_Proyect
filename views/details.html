@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Details</title>
-</head>
-<body>
-    <h1>Anime Details</h1>
-    <div id="anime-details">
-        <!-- Aquí se mostrará la información del anime -->
-    </div>
-    <script type="module" src="../js/details.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Page</title>
+    <!-- font awesone cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- incluir swiper.js y su css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body >
+    <!-- header section start -->
+    <header>
+      <a href="#" class="logo"> <i class="fas fa-infinity"></i>Anime.</a>
+      <nav class="navbar">
+        <a class="active" href="../index.html">home</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a hre="#" class="fas fa-heart" id="heart"></a>
+      </div>
+    </header>
+
+   <!-- video -->
+<section id="contenido-anime">
+<div class="video-container container">
+    <iframe
+    src=""
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+></iframe>
+
+</div>
+
+<div class="about container">
+   <h2>ABOUT KENGAN ASHURA</h2>
+   <p>Ohma Tokita enters a hidden world where corporate disputes are settled in brutal gladiator bouts. Forget the money, he just wants to fight -- and win.
+   Action-packed adventures, offbeat comedies, inspirational stories -- these anime movies and TV shows have a style and spirit unlike anything else.
+   </p>
+</div>
+    <!-- scrennshots -->
+     <div class="screenshots container">
+        <h2>Screenshots</h2>
+        <div class="screenshots-content">
+          <img decoding="async" src="/assets/screenshots/screen-1.jpeg" alt="">  
+          <img decoding="async" src="/assets/screenshots/screen-2.jpeg" alt="">  
+          <img decoding="async" src="/assets/screenshots/screen-3.jpg" alt="">  
+        </div>
+     </div>
+       <!-- download -->
+     <div class="download">
+        <h2>Download links</h2>
+        <div class="download-links">
+           <a href="#">For Android</a> 
+           <a href="#">For IOS</a>
+           <a href="#">For Windows</a>
+        </div>
+     </div>
+    </section>
+    <script src="../js/details.js"></script>
+  </body>
 </html>

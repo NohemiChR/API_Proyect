@@ -5,8 +5,9 @@ export function createSmallSlide(imageUrl, title, id) {
                 <img src="${imageUrl}" alt="${title}">
             </div>
             <div class="content">
+                
                 <h3>${title}</h3>
-                <a href="#" class="btn" id="details-${id}">Ver ahora</a>
+                <a href="#" class="btn" id="${id}">Ver detalles</a>
             </div>
         </div>
     `;
@@ -15,13 +16,13 @@ export function createSmallSlide(imageUrl, title, id) {
     tempDiv.innerHTML = templateSlide.trim();
     const slideElement = tempDiv.firstChild;
     
-    const detailsButton = slideElement.querySelector(`#details-${id}`);
-    detailsButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        // Aquí puedes manejar el ID como desees, por ejemplo redirigir a otra página
-        console.log('Button clicked, ID:', id);
-        window.location.href = `views/details.html?id=${id}`;
-    });
+    // const detailsButton = slideElement.querySelector(`#details-${id}`);
+    // detailsButton.addEventListener('click', (event) => {
+    //     event.preventDefault();
+    //     // Aquí puedes manejar el ID como desees, por ejemplo redirigir a otra página
+    //     console.log('Button clicked, ID:', id);
+    //     window.location.href = `views/details.html?id=${id}`;
+    // });
     
     return slideElement;
 }

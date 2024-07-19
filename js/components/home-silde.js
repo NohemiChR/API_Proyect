@@ -5,7 +5,7 @@ export function createSlideHome(imageUrl, title, description,id) {
                 <div class="content">
                     <h3>${title}</h3>
                     <p>${description}</p>
-                    <a href="#" class="btn" id="details-${id}">Ver ahora</a>
+                    <a href="#" class="btn" id="${id}">Ver detalles</a>
                 </div>
             </div>
         </div>
@@ -15,13 +15,13 @@ export function createSlideHome(imageUrl, title, description,id) {
     tempDiv.innerHTML = templateSlide.trim(); // .trim() elimina los espacios en blanco alrededor
     const slideElement = tempDiv.firstChild;
 
-    const detailsButton = slideElement.querySelector(`#details-${id}`);
-    detailsButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        // Aquí puedes manejar el ID como desees, por ejemplo redirigir a otra página
-        console.log('Button clicked, ID:', id);
-        window.location.href = `views/details.html?id=${id}`;
-    });
+    // const detailsButton = slideElement.querySelector(`#details-${id}`);
+    // detailsButton.addEventListener('click', (event) => {
+    //     event.preventDefault();
+    //     // Aquí puedes manejar el ID como desees, por ejemplo redirigir a otra página
+    //     console.log('Button clicked, ID:', id);
+    //     window.location.href = `views/details.html?id=${id}`;
+    // });
 
     return slideElement;
 }
