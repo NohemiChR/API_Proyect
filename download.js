@@ -29,16 +29,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             }
 
-            // Actualiza las capturas de pantalla (screenshots)
-            const screenshotsContainer = document.querySelector('.screenshots-content');
-            screenshotsContainer.innerHTML = ''; // Limpia las capturas de pantalla existentes
-            anime.images.jpg.large_image_url.forEach(url => {
-                const img = document.createElement('img');
-                img.src = url;
-                img.alt = `${anime.title} screenshot`;
-                img.loading = 'lazy';
-                screenshotsContainer.appendChild(img);
-            });
+                  // Actualiza las capturas de pantalla (screenshots)
+                  const screenshotsContainer = document.querySelector('.screenshots-content');
+                  screenshotsContainer.innerHTML = ''; // Limpia las capturas de pantalla existentes
+      
+                  // Asegúrate de que la URL de la imagen sea accesible
+                  const imageUrls = [
+                      anime.images.jpg.image_url,
+                      anime.images.webp.large_image_url,
+                      anime.images.jpg.large_image_url
+                  ];
+      
+                  imageUrls.forEach(url => {
+                      const img = document.createElement('img');
+                      img.src = url;
+                      img.alt = `${anime.title} screenshot`;
+                      img.loading = 'lazy';
+                      screenshotsContainer.appendChild(img);
+                  })
+
         } else {
             console.error('No anime data found for the provided ID');
         }
